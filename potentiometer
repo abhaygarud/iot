@@ -1,0 +1,38 @@
+// C++ code
+int LED_R=5;
+int LED_G=2;
+int LED_B=3;
+
+int Value_0=0;
+int Value_1=0;
+int Value_2=0;
+
+int Input0=A1;
+int Input1=A2;
+int Input2=A3;
+
+
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(LED_R,OUTPUT);
+  pinMode(LED_G,OUTPUT);
+  pinMode(LED_B,OUTPUT);
+
+}
+
+void loop()
+{
+  
+ 
+ int Value_0=analogRead(A1);
+ int Value_1=analogRead(A2);
+ int Value_2=analogRead(A3);
+  
+ analogWrite(LED_R,Value_0/4);
+ analogWrite(LED_G,Value_1/4);
+ analogWrite(LED_B,Value_2/4);
+ delay(100);
+
+
+}
